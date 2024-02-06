@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decodificador de texto</title>
+    <link rel="stylesheet" href="estilos/estilo.css">
+</head>
+
+<body>
+    
+    <main>
+        <header>
+            
+        </header>
+        <div class="container_texto">
+            <div class="input">
+                <h1 class="nome_text_area_1">Texto para criptografar:</h1>
+                <textarea id="input_texto" placeholder="Digite o texto aqui..."></textarea>
+                <h2 class="regra">Apenas letras minúsculas, sem acentos nem caracteres especiais</h2>
+            </div>
+            <div class="output">
+                <h3 class="nome_text_area_2">Resultado:</h3>
+                <textarea id="output_texto" disabled></textarea>
+            </div>
+        </div><br>
+
+    <div class="container_principal_botoes">
+        <div>
+            <div class="botoes">
+                <button onclick="criptografar()" id="btn_criptografar">Criptografar</button>
+                <button onclick="descriptografar()" disabled id="btn_descriptografar">Descriptografar</button>
+                <button onclick="copiar()" disabled id="btn_copiar">Copiar Texto</button>
+            </div>
+        </div>       
+</div>
+    </main><br>
+
+    <footer>
+        <p class="autor">Desenvolvido por Carlos Júnior</p><br>
+
+        <div class="rodape">
+            <a href="https://github.com/carlosjuniorcarjun" target="_blank"><img src="./img/github.png" width="60" height="45">GitHub</a>
+            <a href="https://www.linkedin.com/in/carlosjuniorcarjun/" target="_blank"><img src="./img/linkedin.jpg" width="85" height="45">Linkedin</a>
+        </div>
+
+    </footer>
+    
+    <script src="desafio.js"></script>
+</body>
+</html>
