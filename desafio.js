@@ -60,7 +60,7 @@ function caracterePermitidos(e) {
 
   const caracteres = String.fromCharCode(e.keyCode);
 
-  const padrao = '[a-z]';
+  const padrao = '[a-z ]';
 
   if(caracteres.match(padrao)) {
     return true;
