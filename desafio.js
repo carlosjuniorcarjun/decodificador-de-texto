@@ -42,11 +42,35 @@ function descriptografar(){
   }
 }
 
-const nao_deixar_colar = document.querySelector ("#input_texto");
-nao_deixar_colar.addEventListener("paste", function(e){
-  e.preventDefault();
+// Código para não deixar dá o Ctrl + V => const nao_deixar_colar = document.querySelector ("#input_texto");
+// Código para não deixar dá o Ctrl + V => nao_deixar_colar.addEventListener("paste", function(e){
+// Código para não deixar dá o Ctrl + V => e.preventDefault();
+// Código para não deixar dá o Ctrl + V => });
+
+
+// Código para não deixar colar caracteres especiais, passo a passo:
+// Selecionar o input
+const nao_deixar_colar_caracteres_especiais = document.querySelector("#input_texto");
+// Adicionar evento - paste
+nao_deixar_colar_caracteres_especiais.addEventListener("paste", function(){
+  const cadeia_de_caracteres_permitidos = new RegExp("^[a-z \b]+$");
+  const caracteres_copiados = this;
+
+// Precisa colocar o tempo para o código reconhecer e não deixar colar o caractere
+  setTimeout(function(){
+
+    const texto_copiado = caracteres_copiados.value;
+
+    if(!cadeia_de_caracteres_permitidos.test(texto_copiado)) {
+      caracteres_copiados.value = "";
+    }
+
+  },10); // Aqui é o tempo
+
 });
 
+
+// Código para não deixar escrever letra maiúscula nem caracteres especiais
 const bloquear_caracteres_especiais = document.querySelector("#input_texto");
 bloquear_caracteres_especiais.addEventListener("keypress", function(e){
 
